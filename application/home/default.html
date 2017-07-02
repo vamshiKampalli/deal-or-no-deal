@@ -1,0 +1,33 @@
+<div id="cases">
+	<img src="assests/images/titleTop.png" alt="logo" id="logo">
+
+
+	<ul id="briefcases">
+	        <li ng-repeat="item in items" >
+	        	<span id={{item.amount}} class="amount"></span>
+	        	<img src={{item.image}}  ng-click="doClick(item, $event)" id={{item.id}} value={{item.amount}}>
+	        </li>
+	</ul>
+
+</div>
+
+<div id="priceBar" ng-show="myVar">
+	<ul  id="price">
+		<!-- <img src={{item.image}} id={{item.id}} value={{item.amount}} > -->
+		<li ng-repeat="amt in amounts" class="amounts">{{amt}}</li>
+	</ul>
+
+	<ul id="price1">
+		<li ng-repeat="amt in amounts1" class="amounts">{{amt}}</li>
+	</ul>
+	
+</div>
+
+<!-- <button ng-click="toggle()" id="button">Hide user</button>
+ -->
+<div class="bottom">
+ <input type="image" src="assests/images/toggle.png" ng-click="toggle()" id="button">
+ <h1>Select a case</h1>
+ <div id="selected"></div>
+ <p>{{name}}</p>
+</div>
